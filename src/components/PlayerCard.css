@@ -1,0 +1,29 @@
+/* src/components/PlayerCard.css */
+.player-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .player-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .player-card h3 {
+    margin: 0;
+    padding: 8px 0;
+    font-size: 18px;
+  }
+  
+  .player-card p {
+    margin: 0;
+    padding: 4px 0;
+  }
+  
+  /* Add more styles as needed */
+  
