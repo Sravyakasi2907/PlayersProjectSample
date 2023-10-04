@@ -13,27 +13,20 @@ const App = () => {
   }, []);
 
   async function searchPlayers(searchTerm) {
-    try {
-      const response = await fetch(
-        `https://api.npoint.io/20c1afef1661881ddc9c`
-      );
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      const data = await response.json();
-
-      console.log("data", data);
-
-      // Sort the players by Value in ascending order
-      const sortedPlayers = data.playerList.sort((a, b) => a.Value - b.Value);
-
-      setPlayers(sortedPlayers);
-    } catch (error) {
-      console.error("Error fetching players:", error);
+    const response = await fetch(
+      `https://api.npoint.io/20c1afef1661881ddc9c`
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
-  }
+    const data = await response.json();
 
-  console.log("players.length", players.length);
+    // Sort the players by Value in ascending order
+    const sortedPlayers = data.playerList.sort((a, b) => a.Value - b.Value);
+
+    setPlayers(sortedPlayers);
+
+  }
 
   const formatDate = (dateString) => {
     const options = {
